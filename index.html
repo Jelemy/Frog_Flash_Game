@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>z5359974_Jeremy_project</title>
+<!-- write your code here -->
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="z5359974_Jeremy_project.js?1668746475690"></script>
+<script>
+// Global Scripts
+	var option_on = false;
+var curr_opt1 = 0;
+var curr_opt2 = 0;
+var double_t = false;
+var double_t1 = false;
+var scene_ch = false;
+var coins = 0;
+var s_tracker = 0;
+var e_tracker = 0;
+var prereq = 0;
+var script = [];
+var event = [];
+var options = [];
+var box_vis = 0;
+var choice_time = false;
+var npc = true;
+var rand = false;
+var well = false;
+var backstory_check = false;
+var lore_check = false;
+var trueend = false;
+script[0] = "...";
+script[1] = "Hey.";
+script[2] = "Ummm...Right. People that want to hop away from it all. \nThey find themselves drawn to this well.\nThey take on this form once they enter.";
+script[3] = "That's what I'm told.. No idea what you've been through, \nthough looks like you fit the bill kiddo.";
+script[4] = "...Name? It's Tad.";
+script[5] = "…Now’s ‘bout a good time. Lemme show you \nwhat we do here. Now get on your back.";
+script[6] = "No funny business I swear. I’m a frog of my word.";
+script[7] = "This here well's a wishing well. From way down \nwe hear the unfiltered wishes of the world.";
+script[8] = "We lie here knowing there ain't a thing \nwe can do about 'em. Ain't it just sad. ";
+script[9] = "Now. Reach for the stars!";
+script[10] = "The one about the potty? \nDon’t worry about that. \nWe’ve got plenty of toilet paper here.";
+script[11] = "A trusty ol' reliable brand called 'Lily Pad'";
+script[12] = "...Yes. I'm sure you're eager to hear more about the well";
+script[13] = "Hear this. It ain’t happen often, but every now and then\n…When the sun hovers directly over the top of the well…";
+script[14] = "Its rays reflect against the well’s waters. \nYou’ve got rays from above and below. \nAbsolutely grand it be.";
+script[15] = "That’s the only time you can hear the voice of the well. \nIt’s also the only time wishes can really be granted.";
+script[16] = "This brief moment we call ‘Quantum Leap’.";
+script[17] = "No point hiding huh. Was a family man yes I was. \nHad an itty bitty child. Was bout knee high when I left the poor \nfella and became like this.";
+script[18] = "Guess that wish... 'bout the child wanting his father back. \nIt might have struck a chord I suppose.";
+script[19] = "Quite the lungs on that one, fresh out of the womb. \nHolding the chap… There was nothing warmer. \nIt was like our hopes and dreams turned into a little person.";
+script[20] = "Was gonna make an elite high jumper out of this one. \n'Just like pops' I thought. \nThough I would’ve been fine no matter what path they chose to \nhop down.";
+script[21] = "A few years later, my jumping days were over. Up ‘n’ comers \nwere getting better by the day and I’d just begun my gradual \ndecline. So much for gold right.";
+script[22] = "A struggle to find work during the recession had me in drunken \nstupors a bit of the time. Drunk on ‘em hops you could say AY... \nAlright.";
+script[23] = "With all the pressure building, I threw a bit of a tantrum. \nThe last one.";
+script[24] = "The eyes on the little one. All widened and scared. \nThere was nothing colder.";
+script[25] = "It was enough to sober me for a moment. Couldn't bear the \nthought of them seeing more of me like this. Told them ‘pop’s gonna \nbe back ya hear’. Who am I kidding?";
+script[26] = "I left and never looked back.  And now you’re all caught up. \nWay to wring the geezer newbie.";
+script[27] = "This well's alive. It tells me things during 'Quantum Leap'.";
+script[28] = "Don’t expect anything dramatic ya hear. Nobody’s kid fell in \nand drowned, nor was it ever used to hide any corpses. ";
+script[29] = "This well was just abandoned the moment it was constructed.";
+script[30] = "The homes around began hooking themselves up with more \nmodern water supply systems just when it was built.";
+script[31] = "Leaving this well, with its purpose never being fulfilled. \nThis solitude and unfulfillment… It’s what birthed \n‘the curse of the well’.";
+script[32] = "This well is bound by a rule. \nIt’s that there must always be one occupant at any time.";
+script[33] = "I’d never thought about leaving the well, but even if I wanted to \nI wouldn’t be able to... That’s until you showed.";
+script[34] = "Don't fret. I wont be leaving. This well...\nIt’s where I belong.";
+script[35] = "You finished a sentence...";
+script[36] = "You've really become my strength in the short time I'd known you. \nI know what I said, but even then, deep down, I was unsure.";
+script[37] = "I'll never run away ever again! I refuse to suffer through \nthat guilt again!";
+script[38] = "...Ha. Check me out...";
+script[39] = "...I'll introduce you during the next 'Quantum Leap'.\nThis well's one hell of a joker you'll see";
+script[40] = "I can’t tell you how long it’s been. \nThey’d probably… moved on. \nAnd.. And the things that I'd done...";
+script[41] = "This place is a place.. for locking monsters like me away. ";
+script[42] = "I’m a monster… no… a loveland frogman far beyond saving.";
+script[43] = "You..You... finished a sentence... \nand with a mighty solid period to boot. Ouch!";
+script[44] = "For some odd reason, I sense your intent, as though you were \nmy own blood. ";
+script[45] = "I see it now. What matters is not running away.";
+script[46] = "Jack all be more hollow than solace gained through \nbliss ‘n ignorance.";
+script[47] = "Now see. My magnum opus as a hop artist. \nIt's my 'hop' that our paths might cross again dear stranger.";
+script[48] = "Quantam Leap...";
+script[49] = "Please… don’t go. You… dear stranger, you know that \nfeeling well don’t you. That feeling of being… \nleft behind.";
+script[50] = "Leaving unfulfilled… what you thought you were \n meant to do. Well, is that not why you are here?";
+script[51] = "Stay. Watch from here… See where the world is heading.";
+script[52] = "The world's wishes, they gather here. Here for us to listen.";
+script[53] = "Tomorrow, the night after that, the night after that, \nthe night after that…the night after that. Together. ";
+script[54] = "Let's look down on this world. The very world that pissed all \nover our hopes and dreams.";
+script[55] = "Let's look down on this world... From the very bottom";
+script[56] = "What do you say?";
+script[57] = "You're going to make a wish?";
+script[58] = "It's futile. Your wish cannot contradict the rules of \nthe curse. If you want to leave, the only way is to...";
+script[59] = "abandon the very person you came here to find. \nBut you're not going to do that are you?";
+script[60] = "Now. Let me hear it. What is your wish?";
+script[61] = "What in the blazes! That be a fire or I'm Moses";
+script[62] = "If we don’t don’t do something this here’s gonna be the start of a bushfire";
+script[63] = "Dammit what goods this well if we can't wish away this predicament…";
+script[64] = "…Eureka! Oi JIMMO fetch us a bucket would ya!";
+script[65] = "So... The well's wish was to see the world burn. But that inadvertantly had people drawing \n water from its body, thereby fulfilling the well's purpose and lifting the curse.";
+script[66] = "Funny how that works out.";
+script[67] = "Anyways. That was a hell of a gamble. And hell of a wallop back there too.";
+script[68] = "Guess I deserved that eh? Little one…";
+event[0] = "You're not a local are ya. This here well's a wishing well. From way down \nwe hear the unfiltered wishes of the world. We lie here knowing there aint a thing we can do about em. It’s a bit sad.";
+event[1] = "How ‘bout a triple 7 on my next roll at the casino BAHAHAH… ha.";
+event[2] = "How ‘bout you roll into a ditch somewhere. Not this one though.";
+event[3] = "I pray to the potty gods that something like that won't ever happen \nagain!";
+event[4] = "SOMETHING LIKE WHAT? OH FROG…";
+event[5] = "I want to know.. *sniffle sniffle* .. where father is..";
+event[6] = "..."
+event[7] = "......";
+event[8] = "...";
+options[0] = "This form...";
+options[1] = "Name...";
+options[2] = "That wish...";
+options[3] = "About the well...";
+options[4] = "No...";
+options[5] = "Yes...";
+options[6] = "About your \nchild...";
+options[7] = "I'm sorry...";
+options[8] = "It's not too late...";
+options[9] = "About your new \nlife here..";
+options[10] = "Grit those teeth.";
+options[11] = "That wish...";
+options[12] = "It's where I \nbelong too.";
+options[13] = "I'll make \na gamble.";
+options[14] = "I'll stay";
+options[15] = "The voice \nof the well..."</script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("41B2D3313BCE8B4F9AE82D4E987A24DC");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.installPlugin(createjs.Sound);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.z5359974_Jeremy_project();
+	stage = new lib.Stage(canvas);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+function playSound(id, loop, offset) {
+	return createjs.Sound.play(id, {'interrupt':createjs.Sound.INTERRUPT_EARLY, 'loop': loop, 'offset': offset});}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:640px; height:480px">
+		<canvas id="canvas" width="640" height="480" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:640px; height:480px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+</body>
+</html>
